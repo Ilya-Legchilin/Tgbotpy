@@ -1,3 +1,7 @@
+#! /usr/bin/env python
+# -*- coding: utf-8 -*-
+
+
 import telebot
 import config
 import random
@@ -23,9 +27,6 @@ def welcome(message):
     
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\n Я - <b>{1.first_name}</b>бот.".format(message.from_user, bot.get_me()),
         parse_mode='html', reply_markup=markup)
-
-
-
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):
