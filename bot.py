@@ -18,7 +18,7 @@ def welcome(message):
     item2 = types.KeyboardButton(")) Как дела?")
     item3 = types.KeyboardButton(")) Where am I?")
 
-    markup.add(item1, item2)
+    markup.add(item1, item2, item3)
 
     
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\n Я - <b>{1.first_name}</b>бот.".format(message.from_user, bot.get_me()),
@@ -36,7 +36,7 @@ def lalala(message):
             bot.send_message(message.chat.id, 'Отлично, сам как?')
 
         elif message.text == ')) Where am I?':
-            bot.sendLocation(message.chat.id, -75.2509766, -0.071389)
+            bot.send_location(message.chat.id, -75.2509766, -0.071389)
 
         else:
             bot.send_message(message.chat.id, 'Я не знаю что ответить :(')
