@@ -10,6 +10,7 @@ import datetime
 #bot = telebot.AsyncTeleBot(token=config.token, threaded=False, skip_pending=False)
 
 
+'''
 @bot.message_handler(commands=["ping"])
 def start(message):
     try:
@@ -18,8 +19,8 @@ def start(message):
     except:
         bot.send_message(config.owner,
                          'Что-то пошло не так!')
-
-
+'''
+'''
 @bot.message_handler(commands=["start"])
 def start(message):
     bot.send_message(message.chat.id, 'Привет, ' + str(
@@ -27,7 +28,7 @@ def start(message):
     bot.forward_message(config.owner, message.chat.id, message.message_id)
     if int(message.chat.id) == int(config.blacklist):
         pass
-
+'''
 
 @bot.message_handler(commands=['send'])
 def process_start(message):

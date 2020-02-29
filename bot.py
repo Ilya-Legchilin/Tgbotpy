@@ -45,8 +45,5 @@ def lalala(message):
         else:
             bot.send_message(message.chat.id, 'Я не знаю что ответить :(')
 
-#@bot.message_handler(content_types=['pinned_message'])
-#def
-
 bot.polling(none_stop=True)
 
