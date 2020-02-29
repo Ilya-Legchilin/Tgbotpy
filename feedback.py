@@ -103,7 +103,7 @@ def bot_users_new(msg):
 		bot.send_message(468437664, 'test')
 		bot.send_message(message.from_user.chat.id, 'ttttt')
 		bot.leave_chat(c.message.chat.id)
-#	except:
-#		bot.send_message(468437664, 'Что-то пошло не так! Ошибка в:\n\n' + "<code>@bot.message_handler(content_types=['new_chat'])\ndef bot_users_new(msg):</code>")
+	except:
+		bot.send_message(468437664, 'Что-то пошло не так! Ошибка в:\n\n' + "<code>@bot.message_handler(content_types=['new_chat'])\ndef bot_users_new(msg):</code>")
 
 
