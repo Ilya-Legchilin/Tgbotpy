@@ -24,8 +24,9 @@ def welcome(message):
     item1 = types.KeyboardButton(")) Рандомное число")
     item2 = types.KeyboardButton(")) Как дела?")
     item3 = types.KeyboardButton(")) Where am I?")
+    item4 = types.KeyboardButton("Ask/Answer")
 
-    markup.add(item1, item2, item3)
+    markup.add(item1, item2, item3, item4)
 
     
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\n Я - <b>{1.first_name}</b>бот.".format(message.from_user, bot.get_me()),
@@ -33,7 +34,7 @@ def welcome(message):
     bot.send_message(config.owner,
                      'Скрипт полностью запущен, бот функционирует! Используй /send для отправки сообщения :)')
 
-
+'''
 @bot.message_handler(content_types=['text'])
 def lalala(message):
     if message.chat.type == 'private':
@@ -48,7 +49,7 @@ def lalala(message):
 
         else:
             bot.send_message(message.chat.id, 'Я не знаю что ответить :(')
-
+'''
 
 @bot.message_handler(commands=['send'])
 def process_start(message):
