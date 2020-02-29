@@ -9,9 +9,6 @@ import datetime
 #telebot.logger.setLevel(logging.DEBUG)
 #bot = telebot.AsyncTeleBot(token=config.token, threaded=False, skip_pending=False)
 
-bot = telebot.TeleBot(config.TOKEN)
-
-
 '''
 @bot.message_handler(commands=["ping"])
 def start(message):
