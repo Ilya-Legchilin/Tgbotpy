@@ -5,6 +5,7 @@
 import telebot
 import config
 import random
+import geocoder
 
 from telebot import types
 
@@ -37,7 +38,8 @@ def lalala(message):
             bot.send_message(message.chat.id, 'Отлично, сам как?')
 
         elif message.text == ')) Where am I?':
-            bot.send_location(message.chat.id, -75.2509766, -0.071389)
+            g = geocoder.ip('me')
+            bot.send_location(message.chat.id, g.latlng[0], g.latlng[1])
 
         else:
             bot.send_message(message.chat.id, 'Я не знаю что ответить :(')
