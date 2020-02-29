@@ -1,3 +1,3 @@
 TOKEN = '1026083345:AAGNy9fiaEQa2fD5Igb8UsdMKX11HGquN8w'
-owner = 123456789
+owner = 548284168
 blacklist = '686489176'
