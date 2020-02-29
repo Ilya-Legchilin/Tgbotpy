@@ -9,9 +9,10 @@ import geocoder
 
 from telebot import types
 
-import feedback
 
 bot = telebot.TeleBot(config.TOKEN)
+
+import feedback
 
 @bot.message_handler(commands=['start'])
 def welcome(message):
