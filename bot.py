@@ -30,6 +30,9 @@ def welcome(message):
     
     bot.send_message(message.chat.id, "Добро пожаловать, {0.first_name}!\n Я - <b>{1.first_name}</b>бот.".format(message.from_user, bot.get_me()),
         parse_mode='html', reply_markup=markup)
+    bot.send_message(config.owner,
+                     'Скрипт полностью запущен, бот функционирует! Используй /send для отправки сообщения :)')
+
 
 @bot.message_handler(content_types=['text'])
 def lalala(message):
@@ -98,11 +101,6 @@ def messages(message):
                 message.from_user.first_name) + ',' + ' я получил сообщение и очень скоро на него отвечу :)')
         except:
             bot.send_message(config.owner, 'Что-то пошло не так! Бот продолжил свою работу.')
-
-
-bot.send_message(config.owner, 'Скрипт полностью запущен, бот функционирует! Используй /send для отправки сообщения :)')
-
-
 
 bot.polling(none_stop=True)
 
